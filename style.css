@@ -1,0 +1,48 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-color: black;
+    font-family: 'Courier New', Courier, monospace
+}
+
+.hello {
+    color: ivory;
+    text-align: center;
+    text-shadow: ivory 0 0 20px;
+}
+.main-nav {
+    background-color: black;
+    padding: 10px 10px;
+    margin: 0;
+    overflow: hidden;
+    display: flex;
+    border-bottom: ivory;
+}
+
+.navbar {
+    border-bottom: 1px solid ivory;
+}
+
+.navlink {
+    list-style-type: none;
+    text-decoration: none;
+}
+
+#left {
+    margin-right: auto;
+}
+
+.navlink > a {
+    text-decoration: none;
+    padding: 10px clamp(15px, 2.5vw, 20px);
+    text-align: center;
+    font-size: clamp(18px, 2.5vw, 20px);
+    color: ivory;
+    transition-duration: 250ms;
+}
+
+a:hover {
+    color: crimson;
+    text-shadow: crimson 0 0 12px;
+    transition-duration: 250ms;
+}

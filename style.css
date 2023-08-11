@@ -15,7 +15,11 @@ body {
     align-items: center;
     justify-content: center;
     border-bottom: 1px solid gray;
-    padding: 40vh 0;
+    padding: 42vh 0;
+    background: url(https://unsplash.com/photos/D20RMf5uVm0/download?ixid=M3wxMjA3fDB8MXxzZWFyY2h8Nzh8fHBoaWxpcHBpbmVzJTIwYmxhY2slMjBhbmQlMjB3aGl0ZXxlbnwwfHx8fDE2OTE3NDE4MTd8MA&force=true) no-repeat;
+    background-position: center;
+    background-size: 150%;
+    animation: backgroundScroll 400s linear infinite;
 }
 
 #jiro {
@@ -40,6 +44,9 @@ body {
 
 .navbar {
     border-bottom: 1px solid gray;
+    position: fixed;
+    width: 100%;
+    overflow: hidden;
 }
 
 .navlink {
@@ -58,6 +65,10 @@ body {
     font-size: clamp(18px, 2.5vw, 20px);
     color: ivory;
     transition-duration: 250ms;
+}
+
+a {
+    color: goldenrod;
 }
 
 a:hover {
@@ -86,13 +97,14 @@ a:hover {
 .project:hover {
     background-color: crimson;
     transition: ease-in 250ms;
-    border: none;
+    border: crimson solid 1px;
+    border-radius: 5px;
     box-shadow: 0 0 10px crimson;
 }
 
 .project:hover > .header {
     color: black;
-    text-shadow: black 0 0 
+    text-shadow: black 0 0 ;
 }
 
 @media only screen and (max-width: 900px) {
@@ -100,3 +112,29 @@ a:hover {
       padding: 10px 75px;
     }
   }
+
+@keyframes backgroundScroll {
+    0%   {background-position: top left;}
+    50%  {background-position: bottom right;}
+    100% {background-position: top left;}
+}
+
+footer {
+    color: ivory;
+    border-top: 1px solid gray;
+    text-align: center;
+    padding-top: 10px;
+    margin-top: 10px;
+}
+
+#credits {
+    font-size: 12px;
+}
+
+#contact {
+    font-size: 30px;
+    margin: 0;
+    padding: 0;
+    word-spacing: 10px;
+    padding-bottom: 10px;
+}
